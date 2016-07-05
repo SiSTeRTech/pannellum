@@ -1,0 +1,60 @@
+<html>
+<head>
+    <script type="text/javascript" src="panellum.js"></script>
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.2/pannellum.css"/>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #444444;
+        }
+        #panellum_player{
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="panellum_player"></div>
+
+<script>
+
+    var img_url = "http://sistertech-interior.s3.amazonaws.com/10107542975732/8507_010916/WBA7F0C58GGM20575/WBA7F0C58GGM20575.int.1.201606300906467.JPG";
+
+    console.log(pannellum);
+
+
+    pannellum.viewer('panellum_player',{
+        "type": "equirectangular",
+        "panorama": img_url,
+        "hotSpots": [
+            {
+                "pitch": 14.1,
+                "yaw": 1.5,
+                "type": "info",
+                "text": "Baltimore Museum of Art",
+                "URL": "https://artbma.org/",
+                "data-test": "hotspot1"
+            },
+            {
+                "pitch": -9.4,
+                "yaw": 222.6,
+                "type": "info",
+                "text": "Art Museum Drive",
+                "data-test": "hotspot2"
+            },
+            {
+                "pitch": -0.9,
+                "yaw": 144.4,
+                "type": "info",
+                "text": "North Charles Street",
+                "data-test": "hotspot3"
+            }
+        ]
+    })
+</script>
+
+</body>
+</html>
